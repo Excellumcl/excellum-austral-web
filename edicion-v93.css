@@ -1,0 +1,85 @@
+:root {
+  --ea-tamano-hero:clamp(42px,5.2vw,88px);
+  --ea-interlineado-hero:1.04;
+}
+
+main :is(h1,h2)[data-titulo-hero] {
+  font-size:var(--ea-tamano-hero) !important;
+  line-height:var(--ea-interlineado-hero) !important;
+}
+
+@media (max-width:650px) {
+  :root { --ea-tamano-hero:clamp(34px,8.4vw,50px); }
+}
+
+/* La cabecera ocupa su propia altura sobre el fondo de la portada. */
+#inicio.hero > .cabecera-tours {
+  position:relative;
+  inset:auto;
+  flex:none;
+}
+#inicio.hero > .hero-copy {
+  padding-top:clamp(36px,7svh,84px);
+}
+@media (max-width:650px) {
+  #inicio.hero > .hero-copy { padding-top:clamp(32px,6svh,54px); }
+}
+
+/* Los enlaces conservan su fila y el subrayado no desplaza el texto activo. */
+@media (width > 1200px) {
+  :is(.ea-cabecera,.header)[data-cabecera-revision] {
+    padding-inline:clamp(20px,2.2vw,48px) !important;
+    gap:12px;
+  }
+  [data-cabecera-revision] > :is(.ea-nav,.nav) {
+    margin-inline-start:auto;
+    gap:clamp(10px,1.35vw,26px);
+    background:transparent;
+  }
+  [data-cabecera-revision] > :is(.ea-nav,.nav) > a {
+    position:relative;
+    font-size:clamp(13px,.9vw,16px);
+  }
+  [data-cabecera-revision] > :is(.ea-nav,.nav) > a[aria-current="page"] {
+    padding-block:0;
+    border-bottom:0;
+  }
+  [data-cabecera-revision] > :is(.ea-nav,.nav) > a[aria-current="page"]::after {
+    content:"";
+    position:absolute;
+    inset:auto 0 -8px;
+    border-bottom:1px solid currentColor;
+  }
+}
+@media (1200px < width <= 1420px) {
+  [data-cabecera-revision] > :is(.ea-nav,.nav) { gap:12px; }
+  [data-cabecera-revision] > :is(.ea-nav,.nav) > a {
+    font-size:13px;
+    letter-spacing:.02em;
+  }
+}
+
+/* Explorar conserva la cabecera dentro del flujo, por encima del texto. */
+#principal > #explorar.hero > .ea-cabecera {
+  position:relative;
+  inset:auto;
+  flex:none;
+  order:0;
+}
+@media (min-width:768px) {
+  #principal > #explorar.hero > .content {
+    position:relative;
+    inset:auto;
+    transform:none;
+    margin-top:0;
+    padding-top:clamp(28px,5svh,56px);
+  }
+}
+@media (width > 1200px) {
+  #principal > #explorar.hero > .ea-cabecera > .ea-nav {
+    min-width:0;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    row-gap:12px;
+  }
+}

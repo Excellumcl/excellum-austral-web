@@ -1,0 +1,98 @@
+.site-footer.unified-footer {
+  box-sizing:border-box;
+  background:#04131f;
+  color:#dce6ed;
+  border-top:1px solid rgba(204,171,100,.27);
+  padding:36px clamp(22px,5vw,90px);
+  font-family:Bahnschrift,Arial,sans-serif;
+}
+.site-footer.unified-footer .uf-wrap {
+  max-width:1380px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  flex-wrap:wrap;
+}
+.site-footer.unified-footer .uf-brand {
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  gap:16px;
+  letter-spacing:.11em;
+}
+.site-footer.unified-footer .uf-emblem {
+  display:block;
+  width:clamp(36px,4vw,52px);
+  height:auto;
+  flex:none;
+}
+.site-footer.unified-footer .uf-brand-text { display:grid; gap:7px; }
+.site-footer.unified-footer .uf-brand-text span { color:#aab7c3; letter-spacing:0; font-size:12px; }
+.site-footer.unified-footer .uf-links { display:flex; flex-wrap:wrap; gap:8px 19px; }
+.site-footer.unified-footer a { color:#dce6ed; text-decoration:none; font-size:13px; }
+.site-footer.unified-footer a:is(:hover,:focus-visible) { text-decoration:underline; }
+.site-footer.unified-footer .uf-date { color:#c8a968; font-size:12px; width:100%; }
+
+@media (width > 1200px) {
+  .ea-cabecera[data-menu-corporativo] > .ea-nav,
+  .ea-cabecera[data-menu-corporativo] > .ea-nav > a {
+    background:transparent !important;
+    box-shadow:none !important;
+    backdrop-filter:none !important;
+    -webkit-backdrop-filter:none !important;
+    border-radius:0 !important;
+  }
+  .ea-cabecera[data-menu-corporativo] > .ea-nav { border:0 !important; }
+  #principal.revision-portada > #inicio > .ea-cabecera,
+  #principal > #patagonia > .ea-cabecera {
+    padding-block:clamp(12px,1.4vw,22px);
+    background:transparent;
+  }
+}
+#principal.revision-portada > #inicio.hero {
+  min-height:clamp(490px,86svh,760px);
+  justify-content:flex-end;
+}
+#principal.revision-portada > #inicio > .content {
+  margin:0 auto clamp(70px,11svh,120px) var(--cover-inset);
+  padding:clamp(116px,17svh,148px) 0 0 !important;
+  transform:none;
+}
+#principal.revision-portada > #inicio > .content h1 {
+  font-size:clamp(42px,5.2vw,88px);
+  line-height:1.04;
+  max-width:960px;
+  margin-bottom:18px;
+}
+#principal.revision-portada > #inicio > .content .subtitle {
+  font-size:clamp(16px,1.35vw,20px);
+  margin-bottom:0;
+}
+#principal #patagonia.patagonia-chapter .intro {
+  min-height:clamp(520px,87svh,760px);
+  padding-top:clamp(116px,16svh,150px);
+  padding-bottom:clamp(48px,7svh,80px);
+}
+#principal #patagonia .intro .intro-copy > h1 {
+  font-size:clamp(44px,5.4vw,88px);
+  margin-bottom:20px;
+}
+#principal #patagonia .intro .guide { margin-top:clamp(18px,4svh,46px); }
+@media (max-width:650px) {
+  #principal.revision-portada > #inicio.hero { min-height:clamp(490px,86svh,690px); }
+  #principal.revision-portada > #inicio > .content {
+    margin:0 22px 65px;
+    padding:100px 0 0 !important;
+  }
+  #principal.revision-portada > #inicio > .content h1 { font-size:clamp(34px,8.4vw,50px); }
+  #principal.revision-portada > #inicio > .content .subtitle { font-size:16px; }
+  #principal #patagonia.patagonia-chapter .intro { padding-top:104px; min-height:510px; }
+  #principal #patagonia .intro .intro-copy > h1 { font-size:clamp(34px,8.4vw,50px); }
+}
+
+/* V110: firma institucional al margen izquierdo del pie en todas las páginas. */
+.site-footer.unified-footer .uf-wrap { max-width:none; width:100%; margin:0; }
+.site-footer.unified-footer .uf-brand { display:flex; align-items:center; justify-content:flex-start; flex-direction:row; gap:16px; }
+.site-footer.unified-footer .uf-emblem { display:block; flex:0 0 auto; width:clamp(38px,4vw,52px); height:auto; object-fit:contain; }

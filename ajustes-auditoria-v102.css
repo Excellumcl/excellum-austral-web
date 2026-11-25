@@ -1,0 +1,74 @@
+/* Flechas decorativas con la misma forma, independiente de la fuente instalada. */
+.link-arrow {
+  display:inline-block;
+  inline-size:.72em;
+  block-size:.72em;
+  flex:none;
+  vertical-align:0;
+  background:currentColor;
+  clip-path:polygon(0 42%,70% 42%,49% 21%,60% 10%,100% 50%,60% 90%,49% 79%,70% 58%,0 58%);
+}
+.link-arrow--ne { transform:rotate(-45deg); }
+.link-arrow--n { transform:rotate(-90deg); }
+.link-arrow--w { transform:rotate(180deg); }
+
+@media (max-width:650px) {
+  #inicio.portada-pesca::before {
+    background:linear-gradient(180deg,#071b2b 0%,#071b2bd1 12%,#071b2bad 42%,#071b2b69 64%,#071b2b 100%);
+  }
+  #inicio.portada-pesca > .hero-copy {
+    text-shadow:0 1px 4px #04131d;
+  }
+}
+
+/* Un fondo estable mantiene la lectura del menú al cambiar el fotograma. */
+@media (min-width:1201px) {
+  #principal.revision-portada > #inicio > .ea-cabecera {
+    background:linear-gradient(180deg,#061827ed,#061827c4);
+  }
+}
+
+#inicio.hero:has(#nav-hero-video)::before {
+  background:linear-gradient(90deg,#031521de 0%,#041827c2 45%,#071b2b30 85%),
+             linear-gradient(180deg,#071b2b78,transparent 38%,#071b2b36 75%,var(--navy));
+}
+
+#inicio.hero:has(#nav-hero-video) .hero-copy .eyebrow,
+#inicio.portada-pesca .hero-copy .eyebrow {
+  font-size:clamp(12px,.95vw,14px);
+  line-height:1.5;
+  color:#f4f1e9;
+  text-shadow:0 1px 4px #061827;
+}
+
+@media (max-width:900px) {
+  #inicio.hero:has(#nav-hero-video)::before {
+    background:linear-gradient(180deg,#071b2bee 0%,#071b2bc9 16%,#071b2bbc 52%,#071b2b72 76%,var(--navy));
+  }
+}
+
+@media (max-width:1200px), (pointer:coarse) {
+  .site-footer.unified-footer .uf-links {
+    gap:4px 12px;
+  }
+  .site-footer.unified-footer .uf-links a {
+    display:inline-flex;
+    align-items:center;
+    gap:.4em;
+    min-width:48px;
+    min-height:48px;
+    padding-inline:4px;
+    font-size:14px;
+  }
+  .site-footer.unified-footer .uf-links a[data-whatsapp] {
+    padding-inline:12px;
+    border:1px solid #d6b77d;
+    color:#f4e5c7;
+  }
+  #donde-estamos .ea58-directions a {
+    display:inline-flex;
+    align-items:center;
+    gap:.4em;
+    min-height:48px;
+  }
+}

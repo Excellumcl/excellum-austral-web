@@ -1,0 +1,53 @@
+/* Estilos originales de la cabecera aprobada de Servicios B2B. */
+.ea-cabecera {position:absolute;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:clamp(17px,2.5vw,32px) var(--g);border-bottom:1px solid var(--line);z-index:80;background:linear-gradient(180deg,rgba(3,12,21,.54),rgba(3,12,21,.05))}
+.ea-marca {display:flex;align-items:center;gap:15px;flex-shrink:0}
+.ea-marca img {width:clamp(43px,4.1vw,58px);height:clamp(43px,4.1vw,58px);object-fit:contain}
+.ea-marca strong {display:block;font:600 clamp(15px,1.35vw,21px)/1.12 Bahnschrift,'Arial Narrow','Segoe UI',sans-serif;letter-spacing:.13em;white-space:nowrap}
+.ea-marca small {display:block;margin-top:6px;font:400 clamp(9px,.7vw,11px)/1.4 'Calibri Light',Calibri,sans-serif;color:#d2dce2;white-space:nowrap}
+.ea-nav {display:flex;align-items:center;gap:clamp(13px,1.6vw,30px)}
+.ea-nav a {font:600 clamp(13px,1.02vw,16px)/1.38 Bahnschrift,'Segoe UI',Arial,sans-serif;letter-spacing:.045em;text-transform:uppercase;white-space:nowrap;transition:color .2s}
+.ea-nav a:hover {color:#fff;text-decoration:underline;text-underline-offset:8px}
+.ea-nav a[aria-current=page] {color:#fff;border-bottom:1px solid var(--white);padding-bottom:6px}
+.ea-menu {display:none;align-items:center;justify-content:center;width:46px;height:46px;border:1px solid #ffffff66;background:#06152170;color:white;font-size:22px}
+@media(max-width:1250px) {
+.ea-cabecera {gap:14px}
+.ea-nav {gap:12px}
+.ea-nav a {font-size:12px}
+.ea-marca strong {font-size:17px;letter-spacing:.08em}
+.ea-marca small {font-size:9px}
+}
+@media(max-width:1200px) {
+.ea-menu {display:flex}
+.ea-cabecera {background:#041321e8;backdrop-filter:blur(12px)}
+.ea-nav {position:absolute;display:none;top:100%;left:var(--g);right:var(--g);padding:15px 24px;background:rgba(5,19,31,.94);border:1px solid #d8e5eb44;backdrop-filter:blur(18px);flex-direction:column;align-items:stretch;gap:0;box-shadow:0 20px 45px #0006}
+.ea-nav.open {display:flex}
+.ea-nav a {padding:16px 0;border-bottom:1px solid var(--line);font-size:15px;white-space:normal}
+.ea-nav a[aria-current=page] {border-bottom:1px solid #fff}
+}
+@media(max-width:700px) {
+.ea-cabecera {padding:15px var(--g)}
+.ea-marca {gap:10px}
+.ea-marca img {width:43px;height:43px}
+.ea-marca strong {font-size:clamp(12px,3.4vw,16px);letter-spacing:.07em}
+.ea-marca small {font-size:9px;white-space:normal}
+}
+
+.ea-cabecera {
+  --g:clamp(23px,6vw,116px);
+  --line:rgba(230,241,246,.19);
+  --white:#f7f9fa;
+  color:var(--white);
+  width:100%;
+}
+.ea-cabecera, .ea-cabecera * {box-sizing:border-box}
+.ea-cabecera a {color:inherit;text-decoration:none}
+.ea-menu {font-family:inherit;cursor:pointer}
+.ea-cabecera :focus-visible {outline:2px solid #fff;outline-offset:4px}
+@media(max-width:700px){.ea-cabecera{--g:22px}}
+/* Reserve space for the overlaid header on these covers. */
+body .hero.pesca-hero {padding-top:clamp(120px,11vw,180px)}
+#patagonia.patagonia-chapter {position:relative}
+#principal #patagonia.patagonia-chapter .intro {padding-top:clamp(120px,11vw,180px)}
+@media(max-width:767px){
+  #explorar.hero.explore > .ea-cabecera {position:relative;inset:auto;order:0;flex:none}
+}

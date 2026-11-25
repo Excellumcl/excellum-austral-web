@@ -1,0 +1,117 @@
+html { scroll-padding-block-start:0; }
+
+/* Cada sección editorial tiene espacio para su contenido antes de la siguiente. */
+main > section,
+main > .home-sustainability > section,
+#principal #patagonia.patagonia-chapter > .photo-section {
+  min-height:100svh !important;
+  min-height:100dvh !important;
+}
+
+/* Inicio: cabecera, titular y firma comparten el flujo del hero. */
+#principal.revision-portada > #inicio.hero {
+  min-height:100svh;
+  min-height:100dvh;
+  justify-content:flex-start;
+}
+#principal.revision-portada > #inicio > .ea-cabecera {
+  position:relative;
+  inset:auto;
+  flex:none;
+}
+#principal.revision-portada > #inicio > .content {
+  width:min(1100px,calc(100% - 2 * var(--cover-inset)));
+  margin:auto 0 auto var(--cover-inset);
+  padding:clamp(28px,6svh,72px) 0 clamp(20px,3svh,42px) !important;
+  transform:none;
+}
+#principal.revision-portada > #inicio > .bottomline {
+  position:relative;
+  inset:auto;
+  padding:0 var(--gutter) clamp(30px,6svh,64px);
+}
+
+/* Explorar tiene una composición propia en móvil y conserva su altura mínima. */
+#principal > #explorar.hero.explore,
+#principal .home-sustainability > #conocer-para-proteger.ea56-knowledge {
+  min-height:100svh !important;
+  min-height:100dvh !important;
+}
+#principal > #donde-estamos { align-content:center; }
+#principal > #excellum-austral {
+  display:grid;
+  align-content:center;
+}
+#principal > #excellum-austral > .institutional-grid { width:100%; }
+
+/* Patagonia Profunda: la cabecera cuenta dentro de la altura de portada. */
+#principal #patagonia.patagonia-chapter > .patagonia-portada {
+  position:relative;
+  isolation:isolate;
+  overflow:clip;
+  display:flex;
+  flex-direction:column;
+  min-height:100svh;
+  min-height:100dvh;
+}
+#principal #patagonia .patagonia-portada > .ea-cabecera {
+  position:relative;
+  inset:auto;
+  flex:none;
+}
+#principal #patagonia.patagonia-chapter .patagonia-portada > .intro {
+  position:static;
+  isolation:auto;
+  overflow:visible;
+  flex:1 0 auto;
+  min-height:0;
+  background:transparent;
+  padding-block:clamp(38px,7svh,88px);
+}
+
+/* Fiesta: la cabecera y el crédito quedan separados del texto de portada. */
+#contenido > #inicio.hero:has(> .hero-body) {
+  justify-content:flex-start;
+}
+#inicio.hero > .hero-body {
+  margin-block:auto;
+  padding-block:clamp(42px,8svh,96px) clamp(28px,5svh,64px);
+}
+#inicio.hero:has(> .hero-body) > .ea-cabecera {
+  position:relative;
+  inset:auto;
+  flex:none;
+}
+#inicio.hero:has(> .hero-body) > .hero-note {
+  position:relative;
+  inset:auto;
+  align-self:flex-end;
+  margin:0 var(--g) 18px;
+}
+
+/* B2B: el bloque editorial sube dentro del espacio bajo el menú. */
+#contenido > #umbral.hero {
+  justify-content:flex-start;
+  padding:0;
+}
+#umbral > .header {
+  position:relative;
+  inset:auto;
+  flex:none;
+}
+#umbral > .b2b-cover-copy {
+  margin-block:auto;
+  padding:clamp(30px,5svh,58px) var(--g) clamp(65px,15svh,170px);
+}
+#contenido > .group-endorsement {
+  display:grid;
+  align-content:center;
+}
+#contenido > .group-endorsement > .group-endorsement-inner {
+  width:100%;
+}
+
+@media (max-width:650px) {
+  #principal.revision-portada > #inicio > .content { --cover-inset:22px; }
+  #principal.revision-portada > #inicio > .bottomline { padding-bottom:28px; }
+}

@@ -1,0 +1,10 @@
+/* V105 — ensayo cromático exclusivamente del hero principal.
+   Conserva estructura, medios, tipografías y dorado del logotipo.
+   El titular completo usa blanco cálido; coordenadas en gris neutral. */
+#principal.revision-portada > #inicio.hero > .ea103-content h1,
+#principal.revision-portada > #inicio.hero > .ea103-content h1 em {
+  color: #F5F5F1 !important;
+}
+#principal.revision-portada > #inicio.hero > .ea-cabecera .ea-marca small {
+  color: #ABB8BF !important;
+}

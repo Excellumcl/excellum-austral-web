@@ -1,0 +1,81 @@
+/* V103 — identidad verbal y firma geográfica. El diseño original se conserva. */
+#principal.revision-portada > #inicio.hero > .ea103-content h1 {
+  max-width:1060px;
+  font-size:clamp(51px,6.3vw,105px);
+  line-height:1.025;
+  letter-spacing:-.046em;
+  text-wrap:balance;
+}
+#principal.revision-portada > #inicio.hero > .ea103-content h1 em {
+  color:#e7d3ac;
+  font-style:normal;
+}
+#principal.revision-portada > #inicio.hero > .ea103-content .subtitle {
+  max-width:660px;
+  font-size:clamp(18px,1.48vw,21px);
+  line-height:1.55;
+  text-wrap:pretty;
+}
+#principal.revision-portada > #inicio.hero > .ea103-coordinates .subtle {
+  color:#e8d4aa;
+  font-size:clamp(11px,.85vw,13px);
+  letter-spacing:.115em;
+  font-weight:600;
+  line-height:1.6;
+}
+#principal.revision-portada > #inicio.hero .ea103-point { padding-inline:.38em; color:#d4b77d; }
+#principal.revision-portada > #inicio.hero .ea103-geo { font-variant-numeric:tabular-nums; white-space:nowrap; }
+@media(max-width:650px){
+  #principal.revision-portada > #inicio.hero > .ea103-content h1 {
+    font-size:clamp(39px,9.2vw,53px);
+    line-height:1.06;
+    letter-spacing:-.043em;
+  }
+  #principal.revision-portada > #inicio.hero > .ea103-content .subtitle {
+    font-size:clamp(16px,3.9vw,18px);
+    line-height:1.48;
+    max-width:38ch;
+  }
+  #principal.revision-portada > #inicio.hero > .ea103-coordinates { padding-bottom:clamp(18px,4svh,35px); }
+  #principal.revision-portada > #inicio.hero > .ea103-coordinates .subtle {
+    font-size:11px;letter-spacing:.035em;
+  }
+}
+@media(max-width:375px){
+  #principal.revision-portada > #inicio.hero > .ea103-content h1 {font-size:clamp(36px,9.4vw,40px)}
+  #principal.revision-portada > #inicio.hero > .ea103-coordinates .subtle {font-size:10px}
+}
+
+/* V104 — ajustes de precisión del hero principal. No modifica el video ni su montaje. */
+/* La cabecera corporativa y el contenido parten del mismo eje horizontal. */
+#principal.revision-portada > #inicio.hero > .ea-cabecera {
+  --g:var(--gutter);
+}
+/* Tipografía corporativa en Windows; alternativas estables en otros sistemas. */
+#principal.revision-portada > #inicio.hero > .ea103-content h1 {
+  font-family:Bahnschrift,'Arial Narrow','Helvetica Neue',Arial,sans-serif;
+  font-synthesis:none;
+  overflow-wrap:normal;
+}
+#principal.revision-portada > #inicio.hero > .ea103-content .subtitle {
+  font-family:'Calibri Light',Calibri,'Helvetica Neue',Arial,sans-serif;
+}
+#principal.revision-portada > #inicio.hero > .ea-cabecera .ea-marca small {
+  font-variant-numeric:tabular-nums;
+  letter-spacing:.02em;
+}
+@media(max-width:700px){
+  #principal.revision-portada > #inicio.hero > .ea-cabecera .ea-marca { min-width:0; flex:1 1 auto; }
+  #principal.revision-portada > #inicio.hero > .ea-cabecera .ea-marca span { min-width:0; }
+  #principal.revision-portada > #inicio.hero > .ea-cabecera .ea-marca small {
+    font-size:clamp(10px,2.55vw,11px);
+    line-height:1.45;
+    white-space:normal;
+    overflow-wrap:normal;
+  }
+  #principal.revision-portada > #inicio.hero > .ea-cabecera .ea-menu {flex:none;}
+}
+@media(max-width:390px){
+  #principal.revision-portada > #inicio.hero > .ea-cabecera .ea-marca small {font-size:10px;}
+  #principal.revision-portada > #inicio.hero > .ea103-content h1 {letter-spacing:-.035em;}
+}
